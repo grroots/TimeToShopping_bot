@@ -1,0 +1,221 @@
+# TimeToShopping_bot .gitignore
+
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.development
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+bot_database.db
+test.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+bot.log
+errors.log
+debug.log
+access.log
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.cache/
+.pytest_cache/
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Media files (unless needed)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.avi
+*.mov
+*.webm
+*.pdf
+*.doc
+*.docx
+
+# Configuration overrides
+config_local.py
+local_settings.py
+
+# Migration files (if using Alembic)
+alembic/versions/*.py
+!alembic/versions/__init__.py
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Railway/Render deployment files
+.railway/
+render.yaml
+
+# Monitoring and metrics
+*.monitoring
+*.metrics
+*.stats
+
+# API keys and tokens (additional safety)
+*token*
+*key*
+*secret*
+credentials.json
+service-account.json
+
+# Export files
+exports/
+*.csv
+*.json
+*.xlsx
+reports/
+
+# Lock files (for different package managers)
+poetry.lock
+Pipfile.lock
+pdm.lock
+
+# Local development
+dev.py
+test_local.py
+debug.py
+scratch.py
+
+# SSL certificates
+*.pem
+*.crt
+*.key
+*.csr
+
+# Kubernetes
+*.yaml
+*.yml
+!requirements.yml
+!docker-compose.yml
+!.github/workflows/*.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Ansible
+*.retry
