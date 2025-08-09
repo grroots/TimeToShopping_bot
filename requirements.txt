@@ -1,40 +1,42 @@
-# TimeToShopping_bot Dependencies
+# TimeToShopping_bot Dependencies - Updated for Python 3.13.5
+# Last updated: August 2025
+# All versions verified for Python 3.13.5 compatibility
 
 # Core bot framework
-aiogram==3.13.0
-aiohttp==3.9.1
+aiogram==3.21.0
+aiohttp==3.12.15
 
 # AI integration
-openai==1.52.0
+openai==1.58.1
 
 # Database
 aiosqlite==0.20.0
-sqlalchemy==2.0.25
-alembic==1.13.1
+sqlalchemy==2.0.42
+alembic==1.14.0
 
 # Task scheduling
 apscheduler==3.10.4
 
 # Configuration and environment
-python-dotenv==1.0.0
+python-dotenv==1.0.1
 
 # Logging
-loguru==0.7.2
+loguru==0.7.3
 
 # Date/time utilities
-python-dateutil==2.8.2
+python-dateutil==2.9.0
 
 # CSV export
-pandas==2.1.4
+pandas==2.3.1
 
 # Async utilities
 asyncio-throttle==1.0.2
 
 # Type hints
-typing-extensions==4.9.0
+typing-extensions==4.12.2
 
 # Development dependencies (optional)
-pytest==7.4.3
-pytest-asyncio==0.21.1
-black==23.12.1
-flake8==6.1.0
+pytest==8.3.4
+pytest-asyncio==0.24.0
+black==24.10.0
+flake8==7.1.1
