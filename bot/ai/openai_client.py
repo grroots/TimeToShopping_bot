@@ -6,9 +6,9 @@ Handles text generation using GPT-4o-mini
 import asyncio
 from typing import Optional, Dict, Any
 from openai import AsyncOpenAI
-from bot.config import config
+from config import config  # ИСПРАВЛЕНО: убрал bot.
 from bot.ai.prompts import get_system_prompt, get_user_prompt
-from bot.logging_config import logger
+from logging_config import logger  # ИСПРАВЛЕНО: убрал bot.
 
 class OpenAIClient:
     """OpenAI API client for text generation"""

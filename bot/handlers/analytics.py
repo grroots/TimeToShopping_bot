@@ -12,7 +12,7 @@ from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, BufferedInputFile
 from aiogram.filters import Command
 
-from bot.logging_config import logger
+from logging_config import logger
 from bot.database.db import db
 from bot.keyboards.common import get_stats_keyboard, get_back_keyboard
 

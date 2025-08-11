@@ -6,8 +6,8 @@ Restricts bot usage to authorized users only
 from typing import Callable, Dict, Any, Awaitable
 from aiogram import BaseMiddleware
 from aiogram.types import Message, CallbackQuery, TelegramObject
-from bot.config import config
-from bot.logging_config import logger
+from config import config  # ИСПРАВЛЕНО: убрал bot.
+from logging_config import logger  # ИСПРАВЛЕНО: убрал bot.
 
 class AccessMiddleware(BaseMiddleware):
     """Middleware to control access to the bot"""

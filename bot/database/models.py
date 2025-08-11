@@ -64,8 +64,8 @@ class Analytics(Base):
     user_id = Column(String(100), nullable=True)  # Telegram user_id
     created_at = Column(DateTime, default=datetime.utcnow)
     
-    # Additional metadata
-    metadata = Column(Text, nullable=True)  # JSON string for extra data
+    # Additional metadata - ПЕРЕИМЕНОВАНО из metadata в extra_data
+    extra_data = Column(Text, nullable=True)  # JSON string for extra data
     
     # Relationship with post
     post = relationship("Post", back_populates="analytics")
@@ -81,7 +81,7 @@ class Analytics(Base):
             "action": self.action,
             "user_id": self.user_id,
             "created_at": self.created_at.isoformat() if self.created_at else None,
-            "metadata": self.metadata
+            "extra_data": self.extra_data  # Изменено с metadata на extra_data
         }
 
 class User(Base):

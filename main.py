@@ -12,8 +12,8 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 
-from bot.config import config
-from bot.logging_config import logger
+from config import config
+from logging_config import logger
 from bot.database.db import db
 from bot.middlewares.access import AccessMiddleware
 from bot.handlers import admin, analytics, scheduler

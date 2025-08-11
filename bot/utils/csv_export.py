@@ -11,7 +11,7 @@ from typing import List, Dict, Any, Optional
 from aiogram.types import BufferedInputFile
 
 from bot.database.db import db
-from bot.logging_config import logger
+from logging_config import logger
 
 class CSVExporter:
     """CSV export functionality for analytics and posts"""

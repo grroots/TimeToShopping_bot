@@ -8,9 +8,9 @@ from typing import List, Optional, Dict, Any
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import selectinload
 from sqlalchemy import select, update, delete, func, and_, desc
-from bot.config import config
+from config import config  # ИСПРАВЛЕНО: убрал bot.
 from bot.database.models import Base, Post, Analytics, User
-from bot.logging_config import logger
+from logging_config import logger  # ИСПРАВЛЕНО: убрал bot.
 
 class Database:
     """Database operations manager"""
@@ -118,14 +118,14 @@ class Database:
     
     # Analytics operations
     async def log_analytics(self, post_id: int, action: str, user_id: Optional[str] = None, 
-                          metadata: Optional[str] = None) -> Analytics:
+                          extra_data: Optional[str] = None) -> Analytics:  # ИСПРАВЛЕНО: metadata -> extra_data
         """Log analytics event"""
         async with self.async_session() as session:
             analytics = Analytics(
                 post_id=post_id,
                 action=action,
                 user_id=user_id,
-                metadata=metadata
+                extra_data=extra_data  # ИСПРАВЛЕНО: metadata -> extra_data
             )
             session.add(analytics)
             await session.commit()

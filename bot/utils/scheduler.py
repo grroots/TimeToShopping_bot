@@ -11,8 +11,8 @@ from apscheduler.triggers.date import DateTrigger
 from apscheduler.triggers.interval import IntervalTrigger
 from pytz import timezone
 
-from bot.config import config
-from bot.logging_config import logger
+from config import config
+from logging_config import logger
 from bot.database.db import db
 from bot.database.models import Post
 

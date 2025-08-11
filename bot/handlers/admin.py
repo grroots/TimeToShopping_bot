@@ -11,7 +11,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.filters import Command, StateFilter
 
-from bot.logging_config import logger
+from logging_config import logger
 from bot.database.db import db
 from bot.ai.openai_client import openai_client
 from bot.keyboards.common import (

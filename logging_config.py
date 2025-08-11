@@ -5,7 +5,7 @@ Configures loguru for structured logging
 
 import sys
 from loguru import logger
-from bot.config import config
+from config import config  # ИСПРАВЛЕНО: убрал bot.
 
 def setup_logging():
     """Configure logging with loguru"""

@@ -9,7 +9,7 @@ from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from aiogram.filters import Command
 
-from bot.logging_config import logger
+from logging_config import logger
 from bot.database.db import db
 from bot.utils.scheduler import scheduler_manager
 from bot.keyboards.common import get_calendar_keyboard, get_time_keyboard, get_back_keyboard
