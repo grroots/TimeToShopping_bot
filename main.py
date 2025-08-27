@@ -5,6 +5,7 @@ Initializes and starts the Telegram bot
 
 import asyncio
 import sys
+import os
 from contextlib import asynccontextmanager
 from aiohttp import web
 from aiogram import Bot, Dispatcher
@@ -151,10 +152,12 @@ async def start_web_server():
         runner = web.AppRunner(app)
         await runner.setup()
         
-        site = web.TCPSite(runner, "0.0.0.0", config.HEALTH_CHECK_PORT)
+        # Use PORT environment variable (for Render/Railway) or fallback to HEALTH_CHECK_PORT
+        port = int(os.environ.get('PORT', config.HEALTH_CHECK_PORT))
+        site = web.TCPSite(runner, "0.0.0.0", port)
         await site.start()
         
-        logger.info(f"Health check server started on port {config.HEALTH_CHECK_PORT}")
+        logger.info(f"Health check server started on port {port}")
         
         # Keep server running
         try:
